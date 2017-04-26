@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://griffis.edumedia.ca data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' https://griffis.edumedia.ca data: content: file: assets-library: ;">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/ratchet.css">
+    <link rel="stylesheet" type="text/css" href="css/ratchet-theme-ios.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Messengr</title>
+</head>
+
+<body>
+    <header class="bar bar-nav">
+        <h1 class="title">MessengR</h1> </header>
+    <div class="content" id="page-Login">
+        <div class="content-padded">
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <input id="username" type="text" placeholder="Full name">
+                <input id="email" type="email" placeholder="Email"> </form>
+            <button class="btn btn-positive btn-block" id="loginBtn">Login</button>
+            <button class="btn btn-primary btn-block" id="registerBtn">Register</button>
+        </div>
+    </div>
+    <div id="messagesModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="newMessage" class="icon icon-compose pull-right" href="#newMessageModal"> </a>
+            <h1 class="title">Messages</h1> </header>
+        <div class="content">
+            <div id="messageListContent" class="content-padded">
+                <ul id="msgList" class="table-view"> </ul>
+            </div>
+        </div>
+    </div>
+    <div id="newMessageModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="modalCloseNew" class="icon icon-close pull-left" href="#newMessageModal"></a>
+            <h1 class="title">New Message</h1> </header>
+        <div class="content">
+            <div id="newMessageContent" class="content-padded">
+                <canvas id="canvas" height="300" width="300"> </canvas>
+                <button class="btn btn-positive btn-block" id="picBtn"><i class="fa fa-camera" aria-hidden="true"></i> Take Picture</button>
+                <form id="newMsgForm">
+                    <select id="newMsgDropDown"> </select>
+                    <textarea rows="4" id="newMsgTextBox"></textarea>
+                </form>
+                <button class="btn btn-primary btn-block" id="sendBtn">Send</button>
+            </div>
+        </div>
+    </div>
+    <div id="messageDetailModal" class="modal">
+        <header class="bar bar-nav">
+            <a id="modalCloseDetail" class="icon icon-close pull-left" href="#messageDetailModal"></a>
+            <a id="newMessageDetail" class="icon icon-compose pull-right" href="#newMessageModal"></a>
+            <h1 id="msgFrom" class="title"></h1> </header>
+        <div class="content">
+            <div id="msgContent" class="content-padded">
+                <canvas id="incomingCanvas" width="300" height="300"></canvas>
+                <p id="incomingMsg" class="content-padded"></p>
+                <button id="btnDel" class="btn btn-negative btn-block">Delete</button>
+            </div>
+        </div>
+    </div> <img id="imageContainer">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/ratchet.js"></script>
+    <script type="text/javascript" src="js/bits.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
